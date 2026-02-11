@@ -1,42 +1,33 @@
-# Project Specification: Global Stock Insight Dashboard
+# Project Specification: Global Stock Insight Dashboard (Professional Version)
 
 ## 1. Project Goal
-An English-language web application that provides a deep-dive analysis of stocks from major global indices (S&P 500, TA-125, Nikkei 225, and European markets). The focus is on comprehensive fundamental data and AI-driven qualitative insights rather than real-time trading.
+An English-language web application providing a deep-dive analysis of stocks from S&P 500, TA-125, Nikkei 225, and European markets. The focus is on fundamental health, efficiency metrics, and AI-driven qualitative insights.
 
 ## 2. Core Indices Support
-* **USA:** S&P 500
-* **Israel:** TA-125
-* **Japan:** Nikkei 225
-* **Europe:** Major exchanges (DAX, FTSE, CAC)
+* **USA:** S&P 500 | **Israel:** TA-125 | **Japan:** Nikkei 225 | **Europe:** Major exchanges.
 
 ## 3. Detailed Feature Requirements
 
-### A. Qualitative Analysis (AI Powered)
-For any selected ticker, provide:
-1. **Business Profile:** Sector, core products/services, and Competitive Advantage (Moat).
-2. **Management:** Key executives and their backgrounds.
-3. **Strategic Vision:** Company's long-term goals.
-4. **Competitors:** List of primary global and local competitors.
+### A. Qualitative Analysis (AI Powered via GPT-4o/Claude)
+1. **Business Profile:** Sector, core products, and Competitive Advantage (Moat).
+2. **Management:** Key executives and brief backgrounds.
+3. **Strategic Vision:** Long-term goals and SWOT Analysis (Strengths, Weaknesses, Opportunities, Threats).
+4. **Competitors:** Main global and local rivals.
 
-### B. Financials & Metrics (Latest Updated Data)
-5. **Income Statement:** Total Revenue, Net Income, and Profit Margins.
-6. **Valuation:** * P/E Ratio (Price-to-Earnings)
-   * PEG Ratio (Price/Earnings to Growth)
-   * EPS (Earnings Per Share)
-7. **Balance Sheet & Yield:** Total Debt and Dividend yield/history.
-8. **Analyst Consensus:** Professional ratings (% Buy/Hold/Sell) and target prices.
+### B. Financials & Valuation (Latest Updated Data)
+5. **Core Metrics:** P/E Ratio, PEG Ratio, EPS (Earnings Per Share).
+6. **Efficiency:** ROE (Return on Equity) and Revenue Growth (YoY).
+7. **Financial Health:** Current Ratio, Debt-to-Equity, and Free Cash Flow (FCF).
+8. **Market Context:** Market Cap, 52-Week High/Low, and Beta (Volatility).
+9. **Dividends:** Yield and payout history.
 
 ### C. Visualizations & News
-9. **Historical Charts:** Static/Interactive charts for 1D, 1W, 1M, 6M, 1Y, 3Y, 5Y.
-10. **Recent News:** Fetch the latest headlines and provide a brief English summary.
+10. **Historical Charts:** 1D, 1W, 1M, 6M, 1Y, 3Y, 5Y.
+11. **Analyst Consensus:** Buy/Hold/Sell percentage and target prices.
+12. **English News Summary:** Latest headlines with sentiment analysis.
 
-## 4. Technical Stack
-* **Framework:** Next.js (App Router)
-* **Styling:** Tailwind CSS + Shadcn/UI
-* **Financial Data API:** Yahoo Finance (via `yfinance` in Python or `yahoo-finance2` in Node.js)
-* **AI Integration:** OpenAI API (GPT-4o) or Claude API for synthesizing company info.
-
-## 5. Implementation Notes for Cline
-* **Data Refresh:** No real-time updates needed. Fetch latest available daily data on request.
-* **Ticker Mapping:** Ensure correct suffixes for international stocks (e.g., `.TA` for Tel Aviv, `.T` for Tokyo).
-* **Language:** The entire interface, data labels, and AI summaries must be in **English**.
+## 4. Technical Requirements
+* **Language:** Entire UI/Logic in English. 
+* **Tooltips:** Provide short Hebrew explanations for each financial metric (content provided in project docs).
+* **Framework:** Next.js (App Router), Tailwind CSS, Shadcn/UI.
+* **API:** Yahoo Finance (via `yahoo-finance2` or similar).
