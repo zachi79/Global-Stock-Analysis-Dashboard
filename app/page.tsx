@@ -36,6 +36,8 @@ async function fetchStockProfile(symbol: string) {
  * 2. Choosing a stock from that index
  * 3. Loading financial metrics for the selected stock
  * 4. Displaying metrics with Hebrew tooltips
+ * 
+ * Updated for production deployment
  */
 export default function Home() {
   const [selectedStock, setSelectedStock] = useState<StockOption | null>(null);
